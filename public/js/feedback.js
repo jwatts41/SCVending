@@ -1,5 +1,5 @@
-// Fetch locations from backend and populate dropdown
-fetch('http://localhost:3000/api/locations') // Make sure the API endpoint is correct
+// Fetch locations from the backend API
+fetch('http://localhost:3000/api/locations') 
   .then(response => response.json())
   .then(locations => {
     const locationDropdown = document.getElementById('locationCompany');
@@ -16,8 +16,9 @@ fetch('http://localhost:3000/api/locations') // Make sure the API endpoint is co
 
 // Handle form submission
 const feedbackForm = document.getElementById("feedbackForm");
-feedbackForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+
+feedbackForm.addEventListener("submit", async (e) => {  
+  e.preventDefault(); 
 
   const location = document.getElementById("locationCompany").value;
   const favoriteItems = document.getElementById("favoriteItems").value;
@@ -35,6 +36,23 @@ feedbackForm.addEventListener("submit", (e) => {
     additionalComments,
   };
 
-  // Log feedback data for now (you could send this to a backend later if needed)
-  console.log("Feedback submitted:", feedbackData);
+  try {
+    const response = await fetch('/api/locations/feedback', { 
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(feedbackData)
+    });
+
+    const result = await response.json();
+    if (response.ok) {
+      alert(result.message);  
+    } else {
+      alert(result.message);  
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('Error submitting feedback. Please try again later.');
+  }
 });

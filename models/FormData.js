@@ -10,4 +10,6 @@ const FormDataSchema = new mongoose.Schema({
   submittedAt: { type: Date, default: Date.now }
 });
 
+const FormData = mongoose.model('FormData', FormDataSchema);
+
 module.exports = mongoose.model('FormData', FormDataSchema);

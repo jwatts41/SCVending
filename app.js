@@ -13,6 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.use('/api', require('./routes/api')); 
+app.use('/api/locations', locationRoutes);
 
 // Start server after connecting to MongoDB
 const startServer = async () => {
