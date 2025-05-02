@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const path = require('path');
 const locationRoutes = require('./routes/locationRoutes');
+const serviceRequestRoutes = require('./routes/serviceRequestRoutes');
 
 dotenv.config(); 
 const app = express();
@@ -14,6 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.use('/api', require('./routes/api')); 
 app.use('/api/locations', locationRoutes);
+app.use('/api', serviceRequestRoutes);
 
 // Start server after connecting to MongoDB
 const startServer = async () => {
