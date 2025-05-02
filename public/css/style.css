@@ -1,3 +1,14 @@
+.album.py-5.bg-body-tertiary {
+    background-color: #f3eeee !important;  
+    padding: 20px;              
+  }
+  
+h1.fw-light {
+    font-size: 3.2rem; 
+  }
+  
+
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -81,17 +92,17 @@
   }
 
 
-  /* Basic Reset */
+/*  
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Apply body styles */
+  } 
+*/
+
   body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
+    background-color: #f3eeee;
     color: #333;
   }
   
@@ -129,7 +140,7 @@
   }
   
   /* Button Styling */
-  button {
+  button1 {
     width: 100%;
     padding: 12px;
     background-color: #007bff;
@@ -142,7 +153,7 @@
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: #777781bc;
   }
   
   /* Responsive Styling for Larger Screens */
