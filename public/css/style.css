@@ -2,11 +2,13 @@ header, footer {
   position: relative !important; 
 }
 
+
 /* Ensure the html and body fill the full height of the viewport */
 html, body {
   height: 100%;    
   margin: 0;       
   overflow-x: hidden; 
+  scroll-behavior: smooth;
 }
 
 
