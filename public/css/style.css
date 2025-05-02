@@ -59,11 +59,11 @@ section.py-5.text-center.container {
 
 /* Limit width of text container */
 .container .col-lg-6 {
-  max-width: 700px; /* Adjust width as needed */
+  max-width: 700px; 
   width: 100%;
 }
 
-/* Add padding to row */
+
 .container .row {
   padding-left: 20px;
   padding-right: 20px;
@@ -277,13 +277,13 @@ footer.text-body-secondary a:hover {
 
   /* General form styling */
 form {
-    width: 80%; /* Set width to 80% of the screen width */
-    max-width: 600px; /* Set max width to 600px */
-    margin: 30px auto; /* Center the form and give it top/bottom margin */
+    width: 80%;
+    max-width: 600px; 
+    margin: 30px auto; 
     padding: 20px;
-    background-color: #f8f9fa; /* Light background color */
+    background-color: #f8f9fa; 
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a card-like effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   }
   
   /* Form title */
@@ -328,6 +328,6 @@ form {
   }
   
   textarea.form-control {
-    height: 150px; /* Set height for textarea */
+    height: 150px; 
   }
   
