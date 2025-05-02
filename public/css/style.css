@@ -12,8 +12,26 @@ html, body {
 
 body {
   display: flex;
-  flex-direction: column; 
-}
+  flex-direction: column;
+  height: 100vh; 
+  }
+
+  body::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/17580.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5; 
+    z-index: -1; 
+  }
+  
+  
 
 /* Ensure the main content area grows to take available space */
 main {
@@ -35,19 +53,53 @@ footer.text-body-secondary {
 }
 
 
-
-
-
-
-
-
-.album.py-5.bg-body-tertiary {
-    background-color: #f3eeee !important;  
+/*.album.py-5.bg-body-tertiary {
+    background-color: #ffffff !important;  
     padding: 20px;  
     margin-top: -10px;
-  }
+    background-image: url('/images/17580.jpg') !important;
+  }*/
 
   
+
+.album.py-5.bg-body-tertiary {
+  position: relative; 
+  padding: 20px; 
+  margin-top: -10px; 
+  background-image: url('/images/17580.jpg') !important; 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+
+.album.py-5.bg-body-tertiary::before {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/17580.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5; 
+  z-index: -1; 
+}
+
+/* Ensure the container stays above the background image */
+.container {
+  position: relative;
+  z-index: 1; /* Keeps the content above the background */
+}
+
+/* Optional: Add transparency to the cards */
+.card {
+  background-color: rgba(255, 255, 255, 0.8); /* Optional, adjust card transparency */
+}
+
+
   /* Center content with Flexbox */
 section.py-5.text-center.container {
   display: flex;
