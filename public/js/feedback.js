@@ -16,9 +16,8 @@ fetch('http://localhost:3000/api/locations')
 
 // Handle form submission
 const feedbackForm = document.getElementById("feedbackForm");
-
-feedbackForm.addEventListener("submit", async (e) => {  
-  e.preventDefault(); 
+feedbackForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
   const location = document.getElementById("locationCompany").value;
   const favoriteItems = document.getElementById("favoriteItems").value;
@@ -37,19 +36,18 @@ feedbackForm.addEventListener("submit", async (e) => {
   };
 
   try {
-    const response = await fetch('/api/locations/feedback', { 
+    const response = await fetch('/api/locations/feedback', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(feedbackData)
     });
 
     const result = await response.json();
     if (response.ok) {
-      alert(result.message);  
+      alert("Thank you for your feedback!");
+      feedbackForm.reset(); 
     } else {
-      alert(result.message);  
+      alert(result.message || "Something went wrong.");
     }
   } catch (error) {
     console.error('Error:', error);
