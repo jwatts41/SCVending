@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const path = require('path');
+const locationRoutes = require('./routes/locationRoutes');
 
 dotenv.config(); 
 const app = express();

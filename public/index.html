@@ -8,7 +8,7 @@
     <link href="css/style.css"/>
 </head>
 <body>
-    <body>
+    
         <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
@@ -163,6 +163,52 @@
           </div>
         </div>
       </section>
+
+      <section class="container my-5">
+        <h2 class="text-center mb-4">We would like to hear your feedback</h2>
+        
+        <form id="feedbackForm">
+          <div class="form-group">
+            <label for="locationCompany">Location and Company</label>
+            <select class="form-control" id="locationCompany" required>
+            </select>
+          </div>
+          
+          
+          <div class="form-group">
+            <label for="favoriteItems">Favorite Item(s) Currently in the machine</label>
+            <input type="text" class="form-control" id="favoriteItems" placeholder="Your favorite item(s)" required>
+          </div>
+          
+         
+          <div class="form-group">
+            <label for="itemsToSee">Items you'd like to see in the machine</label>
+            <input type="text" class="form-control" id="itemsToSee" placeholder="Items you’d like to see" required>
+          </div>
+          
+          
+          <div class="form-group">
+            <label for="itemsDontLike">Items you don’t like or want removed</label>
+            <input type="text" class="form-control" id="itemsDontLike" placeholder="Items to remove" required>
+          </div>
+          
+          
+          <div class="form-group">
+            <label for="dietaryPreferences">Dietary Preferences or Restrictions</label>
+            <input type="text" class="form-control" id="dietaryPreferences" placeholder="Dietary preferences/restrictions">
+          </div>
+          
+          
+          <div class="form-group">
+            <label for="additionalComments">Additional Comments or Suggestions</label>
+            <textarea class="form-control" id="additionalComments" rows="4" placeholder="Any additional feedback?" required></textarea>
+          </div>
+      
+          <button type="submit" class="btn btn-primary">Submit Feedback</button>
+        </form>
+      </section>
+      
+      
     
     </main>
     
@@ -177,7 +223,7 @@
     </footer>
     <script defer src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"></script>
     
-        </body>
+    <script src="js/feedback.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
