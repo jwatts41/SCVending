@@ -1,13 +1,125 @@
+header, footer {
+  position: relative !important; 
+}
+
+/* Ensure the html and body fill the full height of the viewport */
+html, body {
+  height: 100%;    
+  margin: 0;       
+  overflow-x: hidden; 
+}
+
+
+body {
+  display: flex;
+  flex-direction: column; 
+}
+
+/* Ensure the main content area grows to take available space */
+main {
+  flex: 1;            
+  padding-bottom: 60px; 
+  overflow: auto;      
+}
+
+/* Footer styling */
+footer.text-body-secondary {
+  background-color: #000 !important;  
+  color: #fff !important;            
+  padding-top: 10px;                  
+  padding-bottom: 10px;              
+  width: 100%;                        
+  margin-top: auto;                   
+  position: relative !important;     
+  z-index: 1;                         
+}
+
+
+
+
+
+
+
+
 .album.py-5.bg-body-tertiary {
     background-color: #f3eeee !important;  
-    padding: 20px;              
+    padding: 20px;  
+    margin-top: -10px;
   }
+
+  
+  /* Center content with Flexbox */
+section.py-5.text-center.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Limit width of text container */
+.container .col-lg-6 {
+  max-width: 700px; /* Adjust width as needed */
+  width: 100%;
+}
+
+/* Add padding to row */
+.container .row {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Adjust text readability */
+section.py-5.text-center.container p.lead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+  
   
 h1.fw-light {
     font-size: 3.2rem; 
   }
   
+  .navbar.navbar-dark.bg-dark {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    min-height: 80px;
+  }
+  
+  section.py-5.text-center.container {
+    margin-top: 10px; 
+  }
+  
+  
 
+.btn.btn-primary {
+  background-color: #6c757d !important;  
+  border-color: #6c757d !important;      
+  color: white !important;               
+}
+
+
+.btn.btn-primary:hover {
+  background-color: #5a6268 !important;  
+  border-color: #545b62 !important;      
+}
+
+ 
+footer.text-body-secondary {
+  background-color: #212529 !important;  
+  color: #fff !important;             
+}
+
+footer.text-body-secondary a {
+  color: #fff !important; 
+}
+
+footer.text-body-secondary a:hover {
+  color: #ddd !important; 
+}
+
+ 
 
 .bd-placeholder-img {
     font-size: 1.125rem;
