@@ -1,5 +1,5 @@
 // Fetch locations from the backend API
-fetch('http://localhost:3000/api/locations') 
+fetch('/api/locations') 
   .then(response => response.json())
   .then(locations => {
     const locationDropdown = document.getElementById('locationCompany');

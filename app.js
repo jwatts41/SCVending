@@ -17,6 +17,11 @@ app.use('/api', require('./routes/api'));
 app.use('/api/locations', locationRoutes);
 app.use('/api', serviceRequestRoutes);
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+
 // Start server after connecting to MongoDB
 const startServer = async () => {
   try {
