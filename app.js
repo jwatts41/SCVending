@@ -11,15 +11,19 @@ const app = express();
 // Middleware
 app.use(express.json()); 
 app.use(express.static(path.join(__dirname, 'public'))); 
+// Log every incoming request
+app.use((req, res, next) => {
+  console.log(`Request received: ${req.method} ${req.originalUrl}`);
+  next();
+});
+ 
 
 // Routes
 app.use('/api', require('./routes/api')); 
 app.use('/api/locations', locationRoutes);
-app.use('/api', serviceRequestRoutes);
+app.use('/api/service-request', serviceRequestRoutes);
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
+
 
 
 // Start server after connecting to MongoDB

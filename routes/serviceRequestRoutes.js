@@ -3,7 +3,7 @@ const router = express.Router();
 const ServiceRequest = require('../models/ServiceRequest');
 
 // POST route to handle form submission
-router.post('/service-request', async (req, res) => {
+router.post('/', async (req, res) => {
   const { companyName, location, machineType, email, phone } = req.body;
 
   try {
@@ -23,5 +23,6 @@ router.post('/service-request', async (req, res) => {
     res.status(500).json({ message: 'Error submitting service request.' });
   }
 });
+
 
 module.exports = router;
